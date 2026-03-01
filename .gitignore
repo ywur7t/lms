@@ -1,0 +1,10 @@
+practicum_ORM/venv
+practicum_ORM/app/__pycache__
+practicum_ORM/app/data/*
+practicum_ORM/instance/*
+
+structures/venv
+structures/app/__pycache__
+structures/app/data/*
+structures/instance/*
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css')}}"
+    />
+    <title>Здания и сооружения</title>
+  </head>
+  <body>    
+    {% from 'macros.html' import render_table %}
+    <h1>Самые высокие здания и сооружения</h1>
+    
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="openTab(event, 'countries')">Страны</button>
+      <button class="tab-button " onclick="openTab(event, 'types')">Тип зданий</button>
+      <button class="tab-button " onclick="openTab(event, 'cities')">Города</button>
+      <button class="tab-button " onclick="openTab(event, 'buildings')">Здания</button>
+    </div>
+
+    <div id="countries" class="tab-content active">
+      <h2>Страны</h2>
+
+      <details>
+        <summary>Выборка с группировкой по высоте</summary>
+        {{render_table(result_groups_country_head, result_groups_country_body)}}
+      </details>
+      
+
+      {{render_table(result_countries_head, result_countries_body)}}
+    </div>
+    
+    <div id="types" class="tab-content">
+      <h2>Тип зданий</h2>
+
+      <details>
+        <summary>Выборка с группировкой по высоте</summary>
+        {{render_table(result_groups_type_head, result_groups_type_body)}}
+      </details>
+
+      {{render_table(type_buildings_head, type_buildings_body)}}
+    </div>    
+
+    <div id="cities" class="tab-content">
+      <h2>Города</h2>
+      {{render_table(result_cities_head, result_cities_body)}}
+    </div>
+
+    <div id="buildings" class="tab-content">
+      <h2>Здания</h2>
+      {{render_table(result_buildings_head, result_buildings_body)}}
+    </div>
+    
+
+
+    <script>
+      function openTab(evt, tabName) {
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove("active");
+        }
+
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].classList.remove("active");
+        }
+
+        document.getElementById(tabName).classList.add("active");
+        
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
