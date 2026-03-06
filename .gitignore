@@ -8,3 +8,7 @@ structures/app/__pycache__
 structures/app/data/*
 structures/instance/*
 
+datasets/*
+.vscode/*
+
+ORM_for_PO/app/__pycache__/*

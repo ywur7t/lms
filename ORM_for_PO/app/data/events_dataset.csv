@@ -1,0 +1,323 @@
+id,event,team_or_individual
+1,Four W,Team
+2,Normal Hill Team,Individual
+3,Women's Singles,Individual
+4,Men's Triathlon,Individual
+5,Single Sculls W,Individual
+6,Men's Beach Volleyball,Team
+7,Downhill M,Individual
+8,K-4 500m M,Individual
+9,Team M,Individual
+10,Bantamweight,Individual
+11,4-man M,Team
+12,-49kg W,Individual
+13,+109kg,Individual
+14,Sabre Individual M,Individual
+15,Epee Individual M,Team
+16,K-1 200m M,Individual
+17,Men's Basketball,Team
+18,Individual W,Individual
+19,K-1 1000m M,Individual
+20,Men's Singles,Individual
+21,Middleweight,Individual
+22,Freestyle 86kg,Individual
+23,Ice Dance,Individual
+24,Giant Slalom W,Individual
+25,Greco-Roman 60kg,Individual
+26,Team Event,Individual
+27,Men's Indoor Volleyball,Team
+28,Mixed Relay,Individual
+29,Women's Football,Team
+30,Men's Doubles,Individual
+31,2-woman W,Team
+32,Mixed Team,Individual
+33,Mass Start M,Individual
+34,500m M,Individual
+35,Men's Skeleton,Individual
+36,Monobob W,Team
+37,Single Sculls M,Individual
+38,Freestyle 65kg,Individual
+39,Ski Cross M,Individual
+40,3000m Relay W,Individual
+41,3x3 Men's,Team
+42,2-man M,Team
+43,Moguls W,Individual
+44,3x3 Women's,Team
+45,-80kg M,Individual
+46,Men's Football,Team
+47,Double Sculls M,Individual
+48,Normal Hill Team,Team
+49,Skeet M,Individual
+50,Double Sculls W,Individual
+51,10m Air Rifle W,Individual
+52,Greco-Roman 97kg,Individual
+53,1000m M,Individual
+54,Pursuit M,Individual
+55,Greco-Roman 77kg,Individual
+56,Moguls M,Individual
+57,Team W,Individual
+58,Women's Curling,Team
+59,500m W,Individual
+60,Combined M,Individual
+61,3000m Relay W,Team
+62,Pursuit M,Team
+63,1500m M,Team
+64,500m W,Team
+65,500m M,Team
+66,BMX Racing,Individual
+67,Sprint M,Team
+68,All-Around,Individual
+69,Sprint W,Individual
+70,67kg,Individual
+71,Women's Basketball,Team
+72,Half-Lightweight,Individual
+73,Canoe Slalom K-1 M,Individual
+74,Greco-Roman 130kg,Individual
+75,100m Freestyle,Individual
+76,Women's Ice Hockey,Team
+77,Foil Individual M,Team
+78,Pairs,Individual
+79,-58kg M,Individual
+80,10km W,Team
+81,Team W,Team
+82,Men's Ice Hockey,Team
+83,Pole Vault,Individual
+84,400m Individual Medley,Individual
+85,Large Hill Individual,Team
+86,Women's Singles,Team
+87,10m Platform M,Individual
+88,Freestyle 97kg,Individual
+89,Heptathlon,Individual
+90,Light Heavyweight,Individual
+91,Team M,Team
+92,Sprint,Individual
+93,Ski Cross W,Individual
+94,Half-Pipe M,Individual
+95,200m Backstroke,Individual
+96,30km W,Individual
+97,3m Synchronized Springboard M,Individual
+98,96kg,Individual
+99,Women's Beach Volleyball,Team
+100,Big Air M,Individual
+101,Canoe Slalom C-1 W,Individual
+102,Super-G W,Individual
+103,4x100m Relay,Individual
+104,Women's Indoor Volleyball,Team
+105,81kg,Individual
+106,1000m M,Team
+107,89kg,Individual
+108,55kg,Individual
+109,3m Springboard M,Individual
+110,Women's Triathlon,Individual
+111,Skeet W,Individual
+112,15km M,Team
+113,Relay W,Team
+114,200m Individual Medley,Individual
+115,Men's Curling,Team
+116,Normal Hill Individual,Individual
+117,Team Pursuit M,Team
+118,Combined W,Individual
+119,Uneven Bars,Individual
+120,C-2 500m M,Individual
+121,109kg,Individual
+122,Extra-Lightweight,Individual
+123,Team Pursuit,Individual
+124,Pair W,Team
+125,Team,Individual
+126,Foil Individual M,Individual
+127,Individual M,Team
+128,Mixed Doubles,Individual
+129,1000m W,Individual
+130,5000m Relay M,Team
+131,-68kg M,Individual
+132,3000m W,Individual
+133,Mixed Relay,Team
+134,800m Run,Individual
+135,102kg,Individual
+136,Downhill W,Individual
+137,Mass Start M,Team
+138,4x200m Freestyle Relay,Individual
+139,Super Heavyweight,Individual
+140,Mixed Team,Team
+141,Skiathlon W,Team
+142,+67kg W,Individual
+143,Pursuit W,Individual
+144,Parallel Bars,Individual
+145,Sprint W,Team
+146,Team Relay,Team
+147,Sabre Team M,Team
+148,Giant Slalom M,Individual
+149,Heavyweight,Individual
+150,Freestyle 125kg,Individual
+151,Half-Heavyweight,Individual
+152,10m Air Pistol M,Individual
+153,Women's Skeleton,Individual
+154,Shot Put,Individual
+155,100m Breaststroke,Individual
+156,Skiathlon W,Individual
+157,Epee Individual W,Team
+158,Balance Beam,Individual
+159,Mixed Doubles Curling,Team
+160,1500m M,Individual
+161,30km M,Team
+162,50m Freestyle,Individual
+163,4x100m Medley Relay,Individual
+164,Double Sculls W,Team
+165,Rings,Individual
+166,3m Synchronized Springboard W,Individual
+167,200m Breaststroke,Individual
+168,Individual M,Individual
+169,Pair M,Team
+170,50km M,Individual
+171,4x400m Relay,Individual
+172,Skiathlon M,Individual
+173,-57kg W,Individual
+174,Lightweight,Individual
+175,Pair M,Individual
+176,Quadruple Sculls M,Individual
+177,1000m W,Team
+178,Women's Doubles,Individual
+179,200m Freestyle,Individual
+180,Epee Team M,Individual
+181,Road Race,Individual
+182,10m Air Pistol W,Individual
+183,Foil Team M,Team
+184,1500m Freestyle,Individual
+185,Flyweight,Individual
+186,Foil Individual W,Individual
+187,3m Springboard W,Individual
+188,BMX Freestyle,Individual
+189,K-1 200m W,Individual
+190,Men's Doubles,Team
+191,400m Freestyle,Individual
+192,100m Backstroke,Individual
+193,100m Butterfly,Individual
+194,Double Sculls M,Team
+195,Individual W,Team
+196,10m Synchronized Platform W,Individual
+197,Slopestyle W,Individual
+198,-67kg W,Individual
+199,5000m M,Team
+200,Normal Hill Individual,Team
+201,61kg,Individual
+202,Team Sprint W,Individual
+203,50m Rifle 3 Positions M,Individual
+204,High Jump,Individual
+205,Quadruple Sculls M,Team
+206,Freestyle 57kg,Individual
+207,Men's Singles,Team
+208,200m Sprint,Individual
+209,100m Sprint,Individual
+210,10km W,Individual
+211,Marathon,Individual
+212,Featherweight,Individual
+213,5000m Run,Individual
+214,Team Pursuit W,Individual
+215,Half-Middleweight,Individual
+216,Foil Team M,Individual
+217,1500m W,Individual
+218,Big Air W,Individual
+219,Team Relay,Individual
+220,Single Sculls M,Team
+221,Eight W,Team
+222,10m Platform W,Individual
+223,4x10km Relay M,Individual
+224,800m Freestyle,Individual
+225,Vault,Individual
+226,25m Rapid Fire Pistol,Individual
+227,+80kg M,Individual
+228,Sprint M,Individual
+229,Slopestyle M,Individual
+230,5000m W,Team
+231,Foil Individual W,Team
+232,Floor Exercise,Individual
+233,Freestyle 74kg,Individual
+234,Mass Start W,Individual
+235,10000m M,Team
+236,73kg,Individual
+237,Epee Individual M,Individual
+238,Aerials M,Individual
+239,4x5km Relay W,Team
+240,Foil Team W,Team
+241,Epee Team M,Team
+242,Relay W,Individual
+243,Team Sprint M,Team
+244,Mass Start W,Team
+245,Slalom M,Individual
+246,Pommel Horse,Individual
+247,Half-Pipe W,Individual
+248,5000m W,Individual
+249,Quadruple Sculls W,Team
+250,Triple Jump,Individual
+251,10m Synchronized Platform M,Individual
+252,1500m Run,Individual
+253,Long Jump,Individual
+254,Trap W,Individual
+255,Omnium,Individual
+256,Decathlon,Individual
+257,5000m Relay M,Individual
+258,Slalom W,Individual
+259,1500m W,Team
+260,20km Race Walk,Individual
+261,Mixed Team Relay,Individual
+262,50m Rifle 3 Positions W,Individual
+263,3000m W,Team
+264,Super-G M,Individual
+265,200m Butterfly,Individual
+266,50km Race Walk,Individual
+267,Skiathlon M,Team
+268,5000m M,Individual
+269,10000m Run,Individual
+270,K-2 500m M,Individual
+271,Canoe Slalom C-1 M,Individual
+272,Pursuit W,Team
+273,C-1 200m M,Individual
+274,110m Hurdles,Individual
+275,Large Hill Individual,Individual
+276,Four M,Team
+277,Relay M,Individual
+278,Quadruple Sculls W,Individual
+279,Welterweight,Individual
+280,Single Sculls W,Team
+281,K-1 500m W,Individual
+282,Sabre Individual W,Individual
+283,10m Air Rifle M,Individual
+284,Keirin,Individual
+285,Trap M,Individual
+286,15km M,Individual
+287,Mountain Bike Cross-Country,Individual
+288,Team Sprint M,Individual
+289,Epee Individual W,Individual
+290,Madison,Individual
+291,Individual Time Trial,Individual
+292,4x100m Freestyle Relay,Individual
+293,Discus Throw,Individual
+294,Team Sprint W,Team
+295,Mixed Team Relay,Team
+296,Foil Team W,Individual
+297,3000m Steeplechase,Individual
+298,Team Pursuit W,Team
+299,Canoe Slalom K-1 W,Individual
+300,Aerials W,Individual
+301,Sabre Individual M,Team
+302,Relay M,Team
+303,Horizontal Bar,Individual
+304,Four W,Individual
+305,Eight M,Team
+306,Sabre Team M,Individual
+307,400m Sprint,Individual
+308,30km M,Individual
+309,Javelin Throw,Individual
+310,Team Pursuit M,Individual
+311,4x5km Relay W,Individual
+312,Eight W,Individual
+313,10000m M,Individual
+314,Pair W,Individual
+315,50km M,Team
+316,Hammer Throw,Individual
+317,30km W,Team
+318,Four M,Individual
+319,Sabre Individual W,Team
+320,400m Hurdles,Individual
+321,Eight M,Individual
+322,4x10km Relay M,Team

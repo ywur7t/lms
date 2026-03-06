@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    <title>ORM PO</title>
+</head>
+<body>
+    {% from 'macro.html' import render_table %}
+    <h1>ORM PO</h1>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="openTab(event, 'Countries')">Countries</button>
+      <button class="tab-button " onclick="openTab(event, 'Games')">Games</button>
+      <button class="tab-button " onclick="openTab(event, 'Coaches')">Coaches</button>
+      <button class="tab-button " onclick="openTab(event, 'Medals')">Medals</button>
+      <button class="tab-button " onclick="openTab(event, 'Sports')">Sports</button>
+      <button class="tab-button " onclick="openTab(event, 'Events')">Events</button>
+      <button class="tab-button " onclick="openTab(event, 'Athletes')">Athletes</button>
+      <button class="tab-button " onclick="openTab(event, 'Athlete_Participations')">Athlete_Participations</button>
+    </div>
+
+    <div id="Countries" class="tab-content active">
+        <h2>Countries</h2>
+        {{render_table(result_countries_head, result_countries_body)}}
+    </div>
+    
+    <div id="Games" class="tab-content">
+        <h2>Games</h2>
+        {{render_table(result_games_head, result_games_body)}}
+    </div>
+
+    <div id="Coaches" class="tab-content">
+        <h2>Coaches</h2>
+        {{render_table(result_coaches_head, result_coaches_body)}}
+    </div>
+    
+    <div id="Medals" class="tab-content">
+        <h2>Medals</h2>
+        <details>
+            <summary>Самые успешные спортсмены</summary>
+            {{render_table(result_query2_head, result_query2_body)}}
+        </details>
+        {{render_table(result_medals_head, result_medals_body)}}
+    </div>
+    
+    <div id="Sports" class="tab-content">
+        <h2>Sports</h2>
+        <details>
+            <summary>BMI спортсмена</summary>
+            {{render_table(result_query3_head, result_query3_body)}}
+        </details>
+        {{render_table(result_sports_head, result_sports_body)}}
+    </div>
+    
+    <div id="Events" class="tab-content">
+        <h2>Events</h2>
+        {{render_table(result_events_head, result_events_body)}}
+    </div>
+    
+    <div id="Athletes" class="tab-content">
+        <h2>Athletes</h2>
+        <details>
+            <summary>спортсмены и их страны, только женщины, сортировка по росту</summary>
+            {{render_table(result_query1_head, result_query1_body)}}
+        </details>
+        
+        
+        <details>
+            <summary>страны где более 200 спортсменов</summary>
+            {{render_table(result_query4_head, result_query4_body)}}
+        </details>
+        <details>
+            <summary>спортсмены выше среднего роста</summary>
+            {{render_table(result_query5_head, result_query5_body)}}
+        </details>
+        {{render_table(result_Athletes_head, result_Athletes_body)}}
+    </div>
+    
+    <div id="Athlete_Participations" class="tab-content">
+        <h2>Athlete Participations</h2>
+        {{render_table(result_query1_head, result_query1_body)}}
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+      function openTab(evt, tabName) {
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove("active");
+        }
+
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].classList.remove("active");
+        }
+
+        document.getElementById(tabName).classList.add("active");
+        
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+</body>
+</html>
