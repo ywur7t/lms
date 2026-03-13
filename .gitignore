@@ -12,3 +12,7 @@ datasets/*
 .vscode/*
 
 ORM_for_PO/app/__pycache__/*
+
+Lab_API/app/__pycache__
+Lab_API/app/*/__pycache__
+Lab_API/venv
