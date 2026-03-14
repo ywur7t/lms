@@ -159,8 +159,9 @@ def index():
             func.count(Athletes.id).label("athletes_count")
         )
         .join(Athletes)
+        .filter(Countries.code=="MEX")
         .group_by(Countries.country)
-        .having(func.count(Athletes.id) > 200)
+        .having(func.count(Athletes.id) > 0)
     )
     result_query5 = (
         db.session.query(
