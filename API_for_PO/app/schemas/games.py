@@ -7,5 +7,5 @@ class GamesSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         sqla_session = db.session
 
-participation_cschema = GamesSchema()
-participations_cschema = GamesSchema(many=True)
+game_cschema = GamesSchema()
+games_cschema = GamesSchema(many=True)

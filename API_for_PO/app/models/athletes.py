@@ -12,7 +12,7 @@ class Athletes(db.Model):
     weight = db.Column('weight', db.Integer())
 
     country = db.relationship('Countries', back_populates="athletes")
-    athlete_participation = db.relationship('Athlete_Participations', back_populates="athlete", cascade="all, delete")
+    athlete_participation = db.relationship('AthleteParticipations', back_populates="athlete", cascade="all, delete")
 
     def __init__(self, id, name, gender, birth_date, height, weight, country_id):
         self.id = id

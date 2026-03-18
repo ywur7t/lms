@@ -7,5 +7,5 @@ class CoachesSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         sqla_session = db.session
 
-participation_cschema = CoachesSchema()
-participations_cschema = CoachesSchema(many=True)
+coache_cschema = CoachesSchema()
+coaches_cschema = CoachesSchema(many=True)

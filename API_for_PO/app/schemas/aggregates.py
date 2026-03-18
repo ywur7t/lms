@@ -20,3 +20,18 @@ class AllPatricipationsSchema(ma.Schema):
 
 
 all_patricipations_schema = AllPatricipationsSchema(many=True)
+
+
+class StatsSchema(ma.Schema):
+    id = fields.Int(required=False) 
+    games_type = fields.Str(required=False) 
+    name = fields.Str(required=False) 
+    medal = fields.Str(required=False) 
+    year = fields.Int(required=False)
+
+    min_result = fields.Float()
+    max_result = fields.Float()
+    avg_result = fields.Float()
+
+
+stats_schema = StatsSchema(many=True)

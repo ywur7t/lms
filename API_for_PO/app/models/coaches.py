@@ -6,7 +6,7 @@ class Coaches(db.Model):
     id = db.Column('id', db.String(20), primary_key=True)    
     name = db.Column('name', db.String(150))
 
-    athlete_participation = db.relationship('Athlete_Participations', back_populates="coach", cascade="all, delete")
+    athlete_participation = db.relationship('AthleteParticipations', back_populates="coach", cascade="all, delete")
     
     def __init__(self, id, name):
             self.id = id

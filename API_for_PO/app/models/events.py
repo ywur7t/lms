@@ -8,7 +8,7 @@ class Events(db.Model):
     event = db.Column('event', db.String(100))
     team_or_individual = db.Column('team_or_individual', db.String(20))
 
-    athlete_participation = db.relationship('Athlete_Participations', back_populates='event')
+    athlete_participation = db.relationship('AthleteParticipations', back_populates='event')
     sports = db.relationship(
         "Sports",
         secondary="events_sports",

@@ -7,5 +7,5 @@ class SportsSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         sqla_session = db.session
 
-participation_cschema = SportsSchema()
-participations_cschema = SportsSchema(many=True)
+sport_cschema = SportsSchema()
+sports_cschema = SportsSchema(many=True)

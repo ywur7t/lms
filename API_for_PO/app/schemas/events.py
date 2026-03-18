@@ -7,5 +7,5 @@ class EventsSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         sqla_session = db.session
 
-participation_cschema = EventsSchema()
-participations_cschema = EventsSchema(many=True)
+event_cschema = EventsSchema()
+events_cschema = EventsSchema(many=True)

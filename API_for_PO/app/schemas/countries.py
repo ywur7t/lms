@@ -7,5 +7,5 @@ class CountriesSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         sqla_session = db.session
 
-participation_cschema = CountriesSchema()
-participations_cschema = CountriesSchema(many=True)
+country_cschema = CountriesSchema()
+countries_cschema = CountriesSchema(many=True)

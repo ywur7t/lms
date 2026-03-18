@@ -8,7 +8,7 @@ class Games(db.Model):
     games_type = db.Column('games_type', db.String(10))
     host_city = db.Column('host_city', db.String(100))
 
-    athlete_participation = db.relationship('Athlete_Participations', back_populates="games", cascade="all, delete")
+    athlete_participation = db.relationship('AthleteParticipations', back_populates="games", cascade="all, delete")
     
     
     def __init__(self, id, year, games_type, host_city):

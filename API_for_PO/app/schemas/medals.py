@@ -7,5 +7,5 @@ class MedalsSchema(ma.SQLAlchemyAutoSchema):
         load_instance = True
         sqla_session = db.session
 
-participation_cschema = MedalsSchema()
-participations_cschema = MedalsSchema(many=True)
+medal_cschema = MedalsSchema()
+medals_cschema = MedalsSchema(many=True)

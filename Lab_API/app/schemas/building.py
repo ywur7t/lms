@@ -1,7 +1,6 @@
 from app.schemas.city import CitySchema
 from app.schemas.type_building import TypeBuildingSchema
 from app.models.buildings import Building
-
 from app.extensions import ma, db
 
 class BuildingSchema(ma.SQLAlchemyAutoSchema):
