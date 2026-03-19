@@ -1,20 +1,13 @@
-import "./styles/App.css";
+// import Main from "./main/main";
 
-import Navbar from './components/Navbar';
-import Gallery from "./components/Gallery";
-import Content from "./components/Content";
-import Footer from "./components/Footer";
+import List from "./list/List";
 
 function App() {
-
   return (
-    <div>
-      <Navbar active="3" />
-      <Gallery/>      
-      <Content/>
-      <Footer/>
-    </div>
+    <>
+      {/* <Main/> */}
+      <List/>
+    </>
   );
 }
-
 export default App;

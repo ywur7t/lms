@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import MenuItem from "@mui/material/MenuItem";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import { Link } from 'react-router-dom';
 
 import React from "react";
 interface ComponentProps {
@@ -49,15 +50,19 @@ function Navbar({ active }: ComponentProps) {
                     </Typography>
 
                     <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                        <Button variant={active === "1" ? "contained" : "text"} color="info" size="medium">
+
+                        <Link to="/"><Button variant={active === "1" ? "contained" : "text"} color="info" size="medium">
                             Главная
-                        </Button>
-                        <Button variant={active === "2" ? "contained" : "text"} color="info" size="medium">
+                        </Button></Link>
+
+                        <Link to="/list"><Button variant={active === "2" ? "contained" : "text"} color="info" size="medium">
                             Список зданий
-                        </Button>
+                        </Button></Link>
+
                         <Button variant={active === "3" ? "contained" : "text"} color="info" size="medium">
                             Контакты
                         </Button>
+
                     </Box>
                     <Box sx={{ display: { xs: "flex", md: "none" } }}>
                         <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
@@ -76,16 +81,25 @@ function Navbar({ active }: ComponentProps) {
                                         <CloseRoundedIcon />
                                     </IconButton>
                                 </Box>
-                                <MenuItem selected={active==="1"} sx={{
-                                    "&:hover": { bgcolor: "#3e2dfd", },
-                                }}
-                                > Главная </MenuItem>
-                                <MenuItem selected={active==="2"} sx={{
-                                    "&:hover": { bgcolor: "#3e2dfd", },
-                                }}>Список зданий</MenuItem>
-                                <MenuItem selected={active==="3"} sx={{
+
+
+                                <Link to="/">
+                                    <MenuItem selected={active === "1"} sx={{
+                                        "&:hover": { bgcolor: "#3e2dfd", },
+                                    }}
+                                    > Главная </MenuItem>
+                                </Link>
+
+                                <Link to="/list">
+                                    <MenuItem selected={active === "2"} sx={{
+                                        "&:hover": { bgcolor: "#3e2dfd", },
+                                    }}>Список зданий</MenuItem>
+                                </Link>
+
+                                <MenuItem selected={active === "3"} sx={{
                                     "&:hover": { bgcolor: "#3e2dfd", },
                                 }}>Контакты</MenuItem>
+
                             </Box>
                         </Drawer>
                     </Box>
