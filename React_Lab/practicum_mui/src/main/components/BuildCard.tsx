@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { styled } from "@mui/material/styles";
+import { Link } from 'react-router-dom';
 
 interface ComponentProps {
     building: {
@@ -29,7 +30,7 @@ function BuildCard({ building, index }: ComponentProps) {
             display: "flex",
             flexDirection: {
                 xs: index % 2 === 0 ? "row-reverse" : "row",
-                md: index % 2 === 0 ? "row-reverse" : "row", 
+                md: index % 2 === 0 ? "row-reverse" : "row",
             },
             gap: 2,
         }}
@@ -41,7 +42,7 @@ function BuildCard({ building, index }: ComponentProps) {
                 sx={{
                     width: {
                         xs: "20%",
-                        md: 300 
+                        md: 300
                     }
                 }}
 
@@ -58,12 +59,11 @@ function BuildCard({ building, index }: ComponentProps) {
                         </StyledTypography>
                     ))}
                 </CardContent>
-                <CardActions sx={{ justifyContent: 'start'  }} >
-                    <Button size="small" sx={{fontWeight:700}}>Подробнее</Button>
+                <CardActions sx={{ justifyContent: 'start' }} >
+                    <Link key={index} to={"/building/" + index}><Button size="small" sx={{ fontWeight: 700 }}>Подробнее</Button></Link>
                 </CardActions>
             </Box>
         </Card>
     )
 }
-
 export default BuildCard;

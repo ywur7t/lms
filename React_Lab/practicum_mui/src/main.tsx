@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/index.css";
-import App from "./App.tsx";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import  List  from "./list/List";
-import  Main  from "./main/main";
+import List from "./list/List";
+import Main from "./main/Main";
+import Building from "./building/building";
+import Chart from "./chart/Chart";
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,15 @@ const router = createBrowserRouter([
     path: "/list",
     element: <List />,
   },
+  {
+    path: "/building/:id",
+    element: <Building />,
+  },
+  {
+    path: "/chart",
+    element: <Chart />
+  }
+  
 ]);
 
 const root = ReactDOM.createRoot(
