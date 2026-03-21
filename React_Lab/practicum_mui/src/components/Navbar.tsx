@@ -80,6 +80,15 @@ function Navbar({ active }: ComponentProps) {
               </Button>
             </Link>
 
+            <Link to="/testing">
+              <Button
+                variant={active === "4" ? "contained" : "text"}
+                color="info"
+              >
+                Проверь себя
+              </Button>
+            </Link>
+
             {/* <Button
               variant={active === "3" ? "contained" : "text"}
               color="info"
