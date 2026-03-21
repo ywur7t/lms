@@ -9,7 +9,7 @@ import { SortableItem } from "../components/SortableItem";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setDraggedItems } from "./quizSlice";
-import { RootState } from "../../store";
+import { type RootState } from "../../store";
 
 interface Props {
   index: number;

@@ -101,6 +101,7 @@ function Navbar({ active }: ComponentProps) {
               <MenuItem selected={active === "3"}>Диаграммы</MenuItem>
             </Link> */}
           </Box>
+          
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
               <MenuIcon />
