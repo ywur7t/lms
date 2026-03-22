@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import testReducer from "./Testing/Components/testSlice";
+import testReducer from "./Testing/Features/quizSlice";
 
 export const store = configureStore({
   reducer: {
-    test: testReducer,
+    lists: testReducer,
   },
 });
 
