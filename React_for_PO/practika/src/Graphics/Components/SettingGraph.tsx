@@ -43,8 +43,8 @@ function SettingChart({ series, setSeries, isBar, setIsBar }: Props) {
       sx={{ m: "20px 0" }}
     >
       {/* Радио */}
-      <FormControl>
-        <FormLabel>Тип диаграммы:</FormLabel>
+      <FormControl >
+        <FormLabel sx={{color:"#fff"}}>Тип диаграммы:</FormLabel>
 
         <RadioGroup
           value={isBar ? "bar" : "dot"}
@@ -56,8 +56,8 @@ function SettingChart({ series, setSeries, isBar, setIsBar }: Props) {
       </FormControl>
 
       {/* Чекбоксы */}
-      <FormControl>
-        <FormLabel>На диаграмме показать:</FormLabel>
+      <FormControl >
+        <FormLabel sx={{color:"#fff"}}>На диаграмме показать:</FormLabel>
 
         <FormControlLabel
           control={

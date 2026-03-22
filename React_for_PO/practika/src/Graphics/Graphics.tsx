@@ -57,12 +57,12 @@ function Graphics() {
     <>
       <Navbar />
 
-      <Container sx={{ mt: 4 }}>
+      <Container sx={{mt:"10vh"}}>
         <Box sx={{ width: "200px", m: "auto", mb: 3 }}>
           <FormControl fullWidth>
-            <InputLabel>Группировать по</InputLabel>
+            <InputLabel sx={{color:"#fff"}}>Группировать по</InputLabel>
 
-            <Select
+            <Select sx={{border:"1px solid #fff", color:"#fff", '.MuiSvgIcon-root':{color:"#fff"}}}
               id="select-group"
               value={group}
               label="Группировать по"

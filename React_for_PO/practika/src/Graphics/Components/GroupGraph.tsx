@@ -25,7 +25,7 @@ function GroupChart({ data }: Props) {
   const [isBar, setIsBar] = React.useState(true);
 
   const chartSetting = {
-    yAxis: [{ label: "-------" }],
+    yAxis: [{ label: "Values" }],
     height: 400,
   };
 
@@ -46,7 +46,7 @@ function GroupChart({ data }: Props) {
       />
 
       {isBar ? (
-        <BarChart 
+        <BarChart sx={{'& .MuiChartsAxis-tickLabel': {fill: '#fff', },'& .MuiChartsAxis-label': {fill: '#fff',},}}
           dataset={data}
           xAxis={[{ scaleType: "band", dataKey: "Группа" }]}
           series={seriesY}
