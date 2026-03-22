@@ -30,12 +30,12 @@ export const quiz: tQuizzes = [
   {
     id: 2,
     type: "M",
-    title: "Сопоставьте метод и его назначение",
+    title: "Титл",
     tasks: [
-      { question: "NeRF", answer: "3D реконструкция" },
-      { question: "CNN", answer: "Обработка изображений" },
-      { question: "SfM", answer: "Восстановление сцены" },
-      { question: "Depth Map", answer: "Карта глубины" },
+      { question: "Вар1", answer: "Отв1" },
+      { question: "Вар2", answer: "Отв2" },
+      { question: "Вар3", answer: "Отв3" },
+      { question: "Вар4", answer: "Отв4" },
     ],
   },
 

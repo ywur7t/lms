@@ -27,38 +27,48 @@ function Quiz() {
     setResults(null);
   };
   const handleCheck = () => {
-    const res = quiz.map((q, index) => {
-      const userAnswers = lists[index] || [];
-      const correctAnswers = q.tasks.map((t) => t.answer);
+  const res = quiz.map((q, index) => {
+    const userAnswers = lists[index];
 
-      let correct = 0;
+    let correct = 0;
 
-      for (let i = 0; i < correctAnswers.length; i++) {
-        if (q.type === "ONE") {
-  if (userAnswers === q.correct) correct++;
-}
+    // 🔹 MATCHING
+    if (q.type === "M") {
+      const correctAnswers = q.tasks!.map((t) => t.answer);
 
-if (q.type === "MULTI") {
-  if (
-    Array.isArray(userAnswers) &&
-    JSON.stringify(userAnswers.sort()) === JSON.stringify(q.correct.sort())
-  ) {
-    correct++;
-  }
-}
-
-if (q.type === "S") {
-  if (JSON.stringify(userAnswers) === JSON.stringify(q.correct)) {
-    correct++;
-  }
-}
+      if (JSON.stringify(userAnswers) === JSON.stringify(correctAnswers)) {
+        correct = correctAnswers.length;
       }
+    }
 
-      return correct;
-    });
+    // 🔹 SINGLE
+    if (q.type === "ONE") {
+      if (userAnswers === q.correct) correct = 1;
+    }
 
-    setResults(res);
-  };
+    // 🔹 MULTI
+    if (q.type === "MULTI") {
+      if (
+        Array.isArray(userAnswers) &&
+        JSON.stringify([...userAnswers].sort()) ===
+          JSON.stringify([...q.correct].sort())
+      ) {
+        correct = 1;
+      }
+    }
+
+    // 🔹 SORTING
+    if (q.type === "S") {
+      if (JSON.stringify(userAnswers) === JSON.stringify(q.correct)) {
+        correct = 1;
+      }
+    }
+
+    return correct;
+  });
+
+  setResults(res);
+};
 
   return (
     <Container maxWidth="md">
