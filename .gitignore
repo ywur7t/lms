@@ -25,5 +25,8 @@ React_Lab/practicum_mui/node_modules
 
 */venv
 */__pycache__
+*/*/__pycache__
+*/*/*/__pycache__
+*/*/*/*/__pycache__
 */node_modules
 */*/venv
