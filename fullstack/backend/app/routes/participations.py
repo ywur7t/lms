@@ -7,6 +7,7 @@ from marshmallow import ValidationError
 from backend.app.models.athlete_participations import AthleteParticipations
 from backend.app.schemas.aggregates import all_patricipations_schema, stats_schema
 from backend.app.schemas.participations import participation_cschema, participations_cschema
+from sqlalchemy import text
 
 participations_bp = Blueprint("participations", __name__)
 
@@ -165,3 +166,89 @@ def get_stats_athletes():
 def get_stats_medals():
     data = stats_by_medals()
     return jsonify(stats_schema.dump(data, many=True))
+
+
+
+
+
+
+
+
+quiz_bp = Blueprint('quiz', __name__, url_prefix='/api/v1')
+
+@quiz_bp.route('/quizzes', methods=['GET'])
+def get_quizzes():
+    quizzes = db.session.execute(text("""SELECT * FROM quizzes ORDER BY id""")).mappings().all()
+
+    result = []
+
+    for q in quizzes:
+        quiz_data = {
+            "id": q["id"],
+            "type": q["type"],
+            "title": q["title"]
+        }
+
+        # MATCHING
+        if q["type"] == "M":
+            tasks = db.session.execute(text("""
+                SELECT question, answer
+                FROM matching_tasks
+                WHERE quiz_id = :id
+                ORDER BY sort_order
+            """), {"id": q["id"]}).mappings().all()
+
+            quiz_data["tasks"] = [dict(t) for t in tasks]
+
+        # SORTING
+        elif q["type"] == "S":
+            options = db.session.execute(text("""
+                SELECT option_text
+                FROM sorting_options
+                WHERE quiz_id = :id
+                ORDER BY sort_order
+            """), {"id": q["id"]}).scalars().all()
+
+            correct = db.session.execute(text("""
+                SELECT answer_value
+                FROM correct_answers
+                WHERE quiz_id = :id
+                ORDER BY answer_order
+            """), {"id": q["id"]}).scalars().all()
+
+            quiz_data["options"] = options
+            quiz_data["correct"] = correct
+            
+
+        # ONE / MULTI
+        elif q["type"] in ["ONE", "MULTI"]:
+            options = db.session.execute(text("""
+                SELECT option_text, is_correct
+                FROM choice_options
+                WHERE quiz_id = :id
+                ORDER BY sort_order
+            """), {"id": q["id"]}).mappings().all()
+
+            quiz_data["options"] = [o["option_text"] for o in options]
+
+            if q["type"] == "ONE":
+                quiz_data["correct"] = next(
+                    o["option_text"] for o in options if o["is_correct"]
+                )
+            else:
+                quiz_data["correct"] = [
+                    o["option_text"] for o in options if o["is_correct"]
+                ]
+
+        result.append(quiz_data)
+
+    return jsonify({"quiz": result})
+
+
+
+@participations_bp.route('/raw', methods=['GET'])
+def get_raw():
+    data = AthleteParticipations.query.all()
+    return jsonify({
+        "participations": participations_cschema.dump(data)
+    })

@@ -37,6 +37,10 @@ function Navbar() {
                 <Link to="/testing"> 
                 <Button variant={location.pathname === "/testing" ? "contained":"text"} color="info" size="medium"> Tesing </Button> 
                 </Link>
+
+                <Link to="/crud"> 
+                <Button variant={location.pathname === "/crud" ? "contained":"text"} color="info" size="medium"> Crud </Button> 
+                </Link>
             </Box>
 
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -57,6 +61,9 @@ function Navbar() {
                         </Link>
                         <Link to="/testing"> 
                         <MenuItem selected={location.pathname === "/testing"} > Testing </MenuItem> 
+                        </Link>
+                        <Link to="/crud"> 
+                        <MenuItem selected={location.pathname === "/crud"} > Crud </MenuItem> 
                         </Link>
                     </Box>
                 </Drawer>

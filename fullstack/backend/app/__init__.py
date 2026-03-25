@@ -3,8 +3,7 @@ from backend.app.config import DevelopmentConfig
 from backend.app.extensions import db
 from flask_cors import CORS
 
-from backend.app.routes import participations 
-
+from backend.app.routes import participations
 
 
 def create_app():
@@ -19,5 +18,6 @@ def create_app():
 
 
     app.register_blueprint(participations.participations_bp, url_prefix="/api/v1/participations")
+    app.register_blueprint(participations.quiz_bp)
    
     return app

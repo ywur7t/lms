@@ -65,7 +65,7 @@ function ContentItem({ item, index, isPink }: any) {
         {/* ТЕКСТ */}
         <Typography
           sx={{
-            order: 2,
+            order: 1,
             display: "-webkit-box",
             WebkitLineClamp: 4,
             WebkitBoxOrient: "vertical",
@@ -104,7 +104,7 @@ function ContentItem({ item, index, isPink }: any) {
         component="img"
         src={item.img}
         sx={{
-          order: isPink ? 0 : 1,
+          order: isPink ? 2 : 1,
           width: "120px",
           height: "120px",
           objectFit: "cover",

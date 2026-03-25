@@ -46,7 +46,7 @@ function GroupChart({ data }: Props) {
       />
 
       {isBar ? (
-        <BarChart sx={{'& .MuiChartsAxis-tickLabel': {fill: '#fff', },'& .MuiChartsAxis-label': {fill: '#fff',},}}
+        <BarChart sx={{'& .MuiChartsAxis-tickLabel': {fill: '#ffffff !important', },'& .MuiChartsAxis-label': {fill: '#ffffff',},}}
           dataset={data}
           xAxis={[{ scaleType: "band", dataKey: "Группа" }]}
           series={seriesY}

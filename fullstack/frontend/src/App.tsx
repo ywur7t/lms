@@ -7,6 +7,7 @@ import Graphics from "./Graphics/Graphics";
 import Testing from "./Testing/Testing";
 import GalleryPage from "./Main/Components/GalleryPage";
 import ContentPage from "./Main/Components/ContentPage";
+import Crud from "./Crud/crud";
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Route path="/testing" element={<Testing />} />
       <Route path="/gallery/:id" element={<GalleryPage />} />
       <Route path="/content/:id" element={<ContentPage />} />
+      <Route path="/crud/" element={<Crud />} />
     </Routes>
   );
 } export default App;

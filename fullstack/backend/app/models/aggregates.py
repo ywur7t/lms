@@ -89,3 +89,18 @@ def stats_by_medals():
     )
 
     return query.all()
+
+
+# def get_quiz():
+#     query = (
+#         db.session.query( # db.session.execute("SELECT * FROM quizzes ORDER BY id").mappings().all()
+#             Medals.medal,
+#             func.min(AthleteParticipations.result_value).label("min_result"),
+#             func.max(AthleteParticipations.result_value).label("max_result"),
+#             func.avg(AthleteParticipations.result_value).label("avg_result"),
+#         )
+#         .join(AthleteParticipations, AthleteParticipations.medal_id == Medals.id)
+#         .group_by(Medals.medal)
+#     )
+
+#     return query.all()
