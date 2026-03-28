@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 interface ListsState {
-  lists: any[]; // 👈 делаем универсальным
+  lists: any[]; 
 }
 
 const initialState: ListsState = {
@@ -29,7 +29,6 @@ const listsSlice = createSlice({
       state.lists[index] = items;
     },
 
-    // 🔥 ВОТ ЭТО ТЕБЕ НУЖНО
     setAnswer: (
       state,
       action: PayloadAction<{ index: number; value: any }>

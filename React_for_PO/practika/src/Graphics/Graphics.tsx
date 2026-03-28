@@ -60,9 +60,9 @@ function Graphics() {
       <Container sx={{mt:"10vh"}}>
         <Box sx={{ width: "200px", m: "auto", mb: 3 }}>
           <FormControl fullWidth>
-            <InputLabel sx={{color:"#fff"}}>Группировать по</InputLabel>
+            <InputLabel >Группировать по</InputLabel>
 
-            <Select sx={{border:"1px solid #fff", color:"#fff", '.MuiSvgIcon-root':{color:"#fff"}}}
+            <Select sx={{border:"1px solid #fff", }}
               id="select-group"
               value={group}
               label="Группировать по"

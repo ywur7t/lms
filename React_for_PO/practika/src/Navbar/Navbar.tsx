@@ -23,7 +23,7 @@ function Navbar() {
     const toggleDrawer = (newOpen: boolean) => () => {setOpen(newOpen);};
 
     return (
-        <AppBar>
+        <AppBar sx={{color:"#fff", bgcolor:"#ffffff53"}}>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <Link to="/"> 
                 <Button variant={location.pathname === "/" ? "contained":"text"} color="info" size="medium"> Main </Button> 

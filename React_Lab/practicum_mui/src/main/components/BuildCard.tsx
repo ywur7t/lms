@@ -29,7 +29,8 @@ function BuildCard({ building, index }: ComponentProps) {
         <Card sx={{
             display: "flex",
             flexDirection: {
-                xs: index % 2 === 0 ? "row-reverse" : "row",
+                // xs: index % 2 === 0 ? "row-reverse" : "row",
+                xs: "column",
                 md: index % 2 === 0 ? "row-reverse" : "row",
             },
             gap: 2,
@@ -40,11 +41,16 @@ function BuildCard({ building, index }: ComponentProps) {
                 alt={building.title}
                 image={building.img}
                 sx={{
-                    width: {
-                        xs: "20%",
-                        md: 300
-                    }
-                }}
+    width: {
+      xs: "100%", // 🔥 на мобиле во всю ширину
+      md: 300
+    },
+    height: {
+      xs: 200,
+      md: "auto"
+    },
+    objectFit: "cover"
+  }}
 
             />
             <Box sx={{ display: "flex", flexDirection: "column", flex: 1 }}

@@ -7,18 +7,25 @@ from marshmallow import ValidationError
 from app.models.athlete_participations import AthleteParticipations
 from app.schemas.aggregates import all_patricipations_schema, stats_schema
 from app.schemas.participations import participation_cschema, participations_cschema
+from sqlalchemy.orm import joinedload
+
 
 participations_bp = Blueprint("participations", __name__)
 
 
 @participations_bp.route('/', methods=['GET'])
 def get_participations():
-    data = get_all_participations()
+    data = AthleteParticipations.query.options(
+        joinedload(AthleteParticipations.athlete),
+        joinedload(AthleteParticipations.games),
+        joinedload(AthleteParticipations.medal),
+        joinedload(AthleteParticipations.event),
+    ).all()
 
-    return (
-        jsonify({"success": True, "participations": all_patricipations_schema.dump(data)}),
-        200,
-    )
+    return jsonify({
+        "success": True,
+        "participations": participations_cschema.dump(data)
+    }), 200
 
 @participations_bp.route('/<int:id>', methods=['GET'])
 def get_participation(id):

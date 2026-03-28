@@ -1,9 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link as RouterLink } from "react-router-dom";
 import gallerydata from "../../assets/gallerydata";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Navbar from "../../Navbar/Navbar";
 import Box from "@mui/material/Box";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Link from "@mui/material/Link";
 
 function GalleryPage() {
   const { id } = useParams();
@@ -15,17 +17,62 @@ function GalleryPage() {
   return (
     <>
       <Navbar />
-      <Box sx={{margin: "3vw"}}>  
-        <div style={{ padding: "20px" }}>
-          <Typography variant="h2" sx={{margin:"0 0 5vh"}}>{item.title}</Typography>
 
-          <div style={{display: "flex", margin: "0"}}>
-            <img src={item.img} alt={item.title} style={{ width: "50vw", borderRadius: "10px", margin:"10px auto"}} />
-            <Typography variant="body1"> {item.description.map((text) => (<p style={{margin:"3vh"}}>{text}</p>))} </Typography>
-          </div>
-        </div>
+      <Box sx={{ margin: "3vw" }}>
+        <Container maxWidth="lg">
+          
+          {/* 🔥 ХЛЕБНЫЕ КРОШКИ */}
+          <Breadcrumbs sx={{ mb: 3 }}>
+            <Link
+              component={RouterLink}
+              to="/"
+              underline="hover"
+              color="inherit"
+            >
+              Галерея
+            </Link>
+
+            <Typography color="text.primary">
+              {item.title}
+            </Typography>
+          </Breadcrumbs>
+
+          <Typography variant="h2" sx={{ mb: 5 }}>
+            {item.title}
+          </Typography>
+
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" }, // 🔥 адаптив
+              gap: 3,
+            }}
+          >
+            <Box
+              component="img"
+              src={item.img}
+              alt={item.title}
+              sx={{
+                // width: { xs: "100%", md: "auto" },
+                height: { xs: "100%", md: "50vh" },
+                borderRadius: "10px",
+              }}
+            />
+
+            <Box>
+              <Typography variant="body1">
+                {item.description.map((text, index) => (
+                  <p key={index} style={{ margin: "3vh 0" }}>
+                    {text}
+                  </p>
+                ))}
+              </Typography>
+            </Box>
+          </Box>
+        </Container>
       </Box>
     </>
-    
   );
-} export default GalleryPage;
+}
+
+export default GalleryPage;

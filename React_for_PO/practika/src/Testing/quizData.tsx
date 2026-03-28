@@ -13,7 +13,7 @@ export type tQuizzes = {
 }[];
 
 export const quiz: tQuizzes = [
-  // 🔹 1 MATCHING
+
   {
     id: 1,
     type: "M",
@@ -26,48 +26,44 @@ export const quiz: tQuizzes = [
     ],
   },
 
-  // 🔹 2 MATCHING
   {
     id: 2,
     type: "M",
-    title: "Титл",
+    title: "Сопоставьте спортсменов и их виды спорта",
     tasks: [
-      { question: "Вар1", answer: "Отв1" },
-      { question: "Вар2", answer: "Отв2" },
-      { question: "Вар3", answer: "Отв3" },
-      { question: "Вар4", answer: "Отв4" },
+      { question: "Mary Yamamoto", answer: "Плавание" },
+      { question: "Natalya Grigoryan", answer: "Легкая атлетика" },
+      { question: "Monika Ito", answer: "Гимнастика" },
+      { question: "Natalya Mammadov", answer: "Бег" },
     ],
   },
 
-  // 🔹 3 SORTING
   {
     id: 3,
     type: "S",
-    title: "Отсортируйте спортсменов по популярности",
+    title: "Отсортируйте спортсменов по количеству олимпийских медалей (по убыванию)",
     options: [
       "Michael Phelps",
-      "Snoop Dogg",
-      "Thomas Ceccon",
-      "Kim Ye-ji",
+      "Usain Bolt",
+    "Katie Ledecky",
+    "Simone Biles",
     ],
     correct: [
       "Michael Phelps",
-      "Snoop Dogg",
-      "Kim Ye-ji",
-      "Thomas Ceccon",
+      "Usain Bolt",
+    "Katie Ledecky",
+    "Simone Biles",
     ],
   },
 
-  // 🔹 4 SINGLE CHOICE
   {
     id: 4,
     type: "ONE",
-    title: "Где проходили Олимпийские игры 2024?",
+    title: "Где проходили летние Олимпийские игры 2024?",
     options: ["Paris", "Tokyo", "London", "Berlin"],
     correct: "Paris",
   },
 
-  // 🔹 5 MULTIPLE CHOICE
   {
     id: 5,
     type: "MULTI",
@@ -76,11 +72,10 @@ export const quiz: tQuizzes = [
     correct: ["Swimming", "Football", "Athletics"],
   },
 
-  // 🔹 6 SINGLE
   {
     id: 6,
     type: "ONE",
-    title: "В каком году прошли первые Олимпийские игры?",
+    title: "В каком году состоялись первые современные Олимпийские игры?",
     options: ["1896", "1900", "1924", "2000"],
     correct: "1896",
   },

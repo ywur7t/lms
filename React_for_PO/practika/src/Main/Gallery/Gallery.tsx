@@ -5,13 +5,19 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { Link } from "react-router-dom";
 import gallerydata from '../../assets/gallerydata'
-
+import { useMediaQuery, useTheme } from "@mui/material";
 function Gallery() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
         
     return (
     // <Container sx={{ mt: 10}}>
-      <Box sx={{ width: "100%", margin: "0 auto", mt:10 }}>
-        <ImageList variant="quilted" cols={3} rowHeight={200}>
+      <Box sx={{ width: "80%", margin: "0 auto", mt:10 }}>
+        <ImageList
+        variant={isMobile ? "masonry" : "quilted"}
+        cols={isMobile ? 1 : 3}
+        rowHeight={200}
+      >
           
           <ImageListItem cols={2} rows={2}>
             <Link to={`/gallery/${gallerydata[0].id}`}>
