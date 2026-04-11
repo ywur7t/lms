@@ -1,0 +1,12 @@
+// import Main from "./main/main";
+
+import List from "./list/List";
+
+function App() {
+  return (
+    <>
+      <List/>
+    </>
+  );
+}
+export default App;
